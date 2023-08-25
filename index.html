@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="icon" href="./image/icon/arow__icon.svg" type="image/x-icon">
+  <!-- Предпочтительно конечно 16х16 в формате icon -->
+  <link rel="stylesheet" href="./css/main.css">
+
+  <title>Studios</title>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <a href="#" class="menu__link upper" data-goto="first">UP</a>
+    <header class="header">
+
+      <div class="header__container">
+
+        <div class="header__logo">
+          <a href="/" class="logo">
+            <img src="/image/icon/header-logo.png" alt="">
+          </a>
+        </div>
+
+        <div class="header__menu menu">
+          <button type="button" class="menu__icon burger" aria-label="Открыть меню">
+            <span></span>
+          </button>
+
+          <nav class="menu__body">
+
+            <ul class="menu__list">
+              <li class="menu__item"><a class="menu__link" href="#" data-goto="first">first</a></li>
+
+              <li class="menu__item"><span class="menu__link dropdown-toggle">dropdown</span>
+                <button type="button" aria-label="open drop menu " class="menu__arrow"><span></span></button>
+                <ul class="menu__sub-list dropdown-menu">
+                  <li class="menu__sut-item"><a href="/" class="menu__sub-link">first 1</a></li>
+                  <li class="menu__sut-item"><a href="/" class="menu__sub-link">second 2</a></li>
+                  <li class="menu__sut-item"><a href="/" class="menu__sub-link">third 3</a></li>
+                  <li class="menu__sut-item"><a href="/" class="menu__sub-link">fourth 4</a></li>
+                </ul>
+              </li>
+              <li class="menu__item"><a class="menu__link" href="#" data-goto="second">second</a></li>
+              <li class="menu__item"><a class="menu__link" href="#" data-goto="third">third</a></li>
+              <li class="menu__item"><a class="menu__link" href="#" data-goto="fourth">fourth</a></li>
+            </ul>
+          </nav>
+        </div>
+
+      </div>
+    </header>
+
+
+    <main class="page">
+      <section id="first" class="hero">
+        <div class="hero__container">
+          <div class="hero__body">
+            <div class="hero__label animation-items stop-animation-repeat">Lorem, ipsum.</div>
+            <h1 class="hero__title animation-items stop-animation-repeat"><span>Welcome to Ingenius</span> <span>sit
+                amet consectetur.</span>
+            </h1>
+            <p class="hero__text animation-items stop-animation-repeat">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente reprehenderit rem modi quis odit quae
+              officia aliquam et, voluptates libero natus reiciendis ipsa amet tenetur soluta, ut nisi nobis aperiam.
+            </p>
+            <button type="button" class="hero__btn btn-plan animation-items stop-animation-repeat">Lorem ipsum dolor
+              sit.<span></span></button>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="games">
+        <div class="games__container">
+          <div class="games__items filter animation-items stop-animation-repeat">
+            <article class="filter__item games__item item-games">
+
+              <h2 class="games__title title">News exclusive</h2>
+
+            </article>
+            <article class="filter__item games__item item-games blue">
+              <div class="item-games__icon">
+                <img src="././image/icon/games_img0.svg" alt="games">
+              </div>
+              <div class="item-games__body">
+                <div class="item-games__title title"> Mmorpg</div>
+                <div class="item-games__text">Warcraft</div>
+              </div>
+            </article>
+            <article class="filter__item games__item item-games crusta">
+              <div class="item-games__icon">
+                <img src="././image/icon/games_img0.svg" alt="games">
+              </div>
+              <div class="item-games__body">
+                <div class="item-games__title title">Action</div>
+                <div class="item-games__text">Need For Speed</div>
+              </div>
+            </article>
+            <article class="filter__item games__item item-games bush">
+              <div class="item-games__icon">
+                <img src="././image/icon/games_img0.svg" alt="games">
+              </div>
+              <div class="item-games__body">
+                <div class="item-games__title title">Rgame</div>
+                <div class="item-games__text">Black of desert</div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="second" class="horror">
+        <div class="horror__container">
+          <div class="horror__inner">
+            <div class="horror__image animation-items">
+              <picture>
+                <source srcset="././image/img/horror.webp" type="image/webp">
+                <img src="././image/img/horror.jpg" alt="picture">
+              </picture>
+            </div>
+            <div class="horror__body">
+              <div class="horror__label label animation-items">horror</div>
+              <h2 class="horror__title title animation-items">Lorem ipsum dolor sit fully sit
+                dolor</h2>
+              <ul class="horror__list animation-items">
+                <li class="horror__item">Lorem, ipsum dolor. Animi, quis.</li>
+                <li class="horror__item">Lorem ipsum dolor sit. </li>
+                <li class="horror__item">Lorem ipsum dolor sit amet.</li>
+
+              </ul>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="third" class="mmorpg">
+        <div class="mmorpg__container">
+          <div class="mmorpg__inner">
+            <div class="mmorpg__image animation-items">
+              <picture>
+                <source srcset="././image/img/mmorpg__img.webp" type="image/webp">
+                <img src="././image/img/mmorpg__img.jpg" alt="picture">
+              </picture>
+            </div>
+            <div class="mmorpg__body">
+              <div class="mmorpg__label label animation-items">mmorpg</div>
+              <h2 class="mmorpg__title title animation-items">Lorem ipsum dolor sit amet consectetur.</h2>
+              <p class="mmorpg__text animation-items">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad quod, molestiae facere quos, debitis
+                laudantium a praesentium quibusdam optio soluta officiis omnis! Neque nihil adipisci id hic fugiat
+                recusandae alias.
+
+              </p>
+
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="trading" class="trading">
+        <div class="trading__container">
+          <h2 class="trading__title title animation-items">Are you ready for an exchange ?</h2>
+          <div class="trading__filter filter animation-items">
+            <!-- SEPOR LVL 1 -->
+            <article class="trading__item filter__item item-filter">
+              <!-- ! -->
+              <button type="button" class="item-filter__button bush" aria-label="open filter purpose">
+                <!-- ! -->
+                <h3 class=" item-filter__header">
+                  <div class="item-filter__type">Purpose</div>
+                  <div class="item-filter__icon"></div>
+                </h3>
+                <!-- ! -->
+                <div class="item-filter__value">Buy</div>
+              </button>
+              <!-- ! -->
+              <!-- ! -->
+              <ul class="item-filter__dropdown">
+                <li class="item-filter__select">Buy</li>
+                <li class="item-filter__select">Sell</li>
+                <li class="item-filter__select">Trade</li>
+              </ul>
+              <!-- ! -->
+            </article>
+            <!-- *SEPOR LVL 1 -->
+            <article class="filter__item trading__item item-filter">
+
+              <button type="button" class="item-filter__button crusta" aria-label="open filter genres">
+                <h3 class="item-filter__header">
+                  <div class="item-filter__type">genres</div>
+                  <div class="item-filter__icon"></div>
+                </h3>
+                <!--*SEPOR -->
+                <div class="item-filter__value">Shooters</div>
+                <!--*SEPOR -->
+              </button>
+              <!--SEPOR -->
+              <ul class="item-filter__dropdown">
+                <li class="item-filter__select">MMORPG</li>
+                <li class="item-filter__select">Shooters</li>
+              </ul>
+              <!--SEPOR -->
+            </article>
+            <!--     SEPOR LVL 1 -->
+            <article class="filter__item trading__item item-filter">
+              <!-- ! -->
+              <button type="button" class="item-filter__button blue" aria-label="open filter games">
+                <h3 class=" item-filter__header">
+                  <!-- ! -->
+                  <div class="item-filter__type">Games</div>
+                  <div class="item-filter__icon"></div>
+                  <!-- ! -->
+                </h3>
+
+                <div class="item-filter__value">Grand Theft Auto</div>
+              </button>
+              <!-- ! -->
+              <!-- ! -->
+              <ul class="item-filter__dropdown">
+                <li class="item-filter__select">Lineage</li>
+                <li class="item-filter__select">Grand Theft Auto</li>
+                <li class="item-filter__select">Warcraft</li>
+                <li class="item-filter__select">Realm Royale</li>
+              </ul>
+              <!-- ! -->
+            </article>
+            <!-- *SEPOR LVL 1 -->
+            <article class="filter__item trading__item">
+              <button class=" item-filter__search gray">Search</button>
+            </article>
+
+            <!-- *SEPOR LVL 1 -->
+          </div>
+        </div>
+      </section>
+
+      <section id="fourth" class="guild">
+        <div class="guild__container">
+          <div class="guild__body">
+            <div class="guild__label animation-items">guild start</div>
+            <h2 class="guild__title animation-items">Lorem ipsum dolor sit amet consectetur.</h2>
+            <p class="guild__text animation-items">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis
+              asperiores fuga
+              odio. Veniam earum maxime magni. Blanditiis aliquam laborum dolores natus? Ipsum soluta officia tempore,
+              ab aliquam distinctio id reprehenderit?</p>
+            <button type="button" class="guild__btn btn-plan animation-items">Select a membership
+              plan<span></span></button>
+          </div>
+
+        </div>
+      </section>
+    </main>
+
+
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__logo">
+          <a href="/" class="logo">
+
+            <img src="././image/icon/header-logo.png" alt="logo">
+
+
+          </a>
+        </div>
+
+        <ul class="footer__social">
+          <li class="footer__item"><a href="/"><img src="././image/icon/footer_tw.svg" alt="twitter"></a></li>
+          <li class="footer__item"><a href="/"><img src="././image/icon/footer_fb.svg" alt="facebook"></a></li>
+          <li class="footer__item"><a href="/"><img src="././image/icon/footer_inst.svg" alt="instagram"></a></li>
+        </ul>
+
+      </div>
+    </footer>
+
+
+  </div>
+
+
+
+
+
+
+
+
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
