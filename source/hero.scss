@@ -1,0 +1,172 @@
+.hero {
+  padding: 10rem 0px;
+  position: relative;
+  background:
+    radial-gradient(837.78% 378.29% at 69.44% -79.86%,
+      rgba(31, 35, 39, 0) 0%, #191C1F 47.89%,
+      rgba(31, 35, 39, 0) 100%),
+    url('../image/img/hero_bg.jpg');
+
+  background: {
+    position: center;
+    repeat: no-repeat;
+    size: cover;
+  }
+
+
+  @supports (background-image: url('../image/img/hero_bg.webp')) {
+    background:
+      radial-gradient(837.78% 378.29% at 69.44% -79.86%,
+        rgba(31, 35, 39, 0) 0%, #191C1F 47.89%,
+        rgba(31, 35, 39, 0) 100%),
+      url('../image/img/hero_bg.webp');
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+
+
+
+
+  // .hero__container
+  &__container {}
+
+  //.hero__body
+  &__body {
+    max-width: 46.625rem;
+  }
+
+  // .hero__label
+  &__label {
+    @extend %main-label;
+    // @include animation(0s);
+    @include animation(0, translate(0, 2.75rem), translate(0, 0), 0s);
+
+
+    &:not(:last-child) {
+      margin: 0px 0px .3125rem 0px;
+    }
+  }
+
+  // .hero__title
+  &__title {
+    // @include animation(0s);
+    @include animation(0, translate(0, 2.75rem), translate(0, 0), 0s);
+
+
+    @extend %main-title;
+
+    &>span {
+      display: inline-block;
+      padding: .3125rem;
+      background: linear-gradient(270deg, #9c1b82 0, #4e12b9 100%);
+
+
+      &:not(:last-child) {
+        margin: 0px 0px .3125rem 0px;
+      }
+
+    }
+
+
+    &:not(:last-child) {
+      margin: 0px 0px .9375rem 0px;
+    }
+  }
+
+  // .hero__content
+  &__text {
+    @extend %main-text;
+    // @include animation(.2s);
+    @include animation(0, translate(0, 2.75rem), translate(0, 0), .2s);
+
+    &:not(:last-child) {
+      margin: 0px 0px 1.875rem 0px;
+    }
+  }
+
+  // .hero__btn
+  &__btn {
+
+
+    @include animation(0, translate(0, 2.75rem), translate(0, 0), .3s);
+    // @include animation(.3s);
+
+
+  }
+}
+
+.btn-plan {
+  @extend %btnPlain;
+
+  & span {
+    display: inline-block;
+    width: .625rem;
+    height: .625rem;
+    margin: 0px 0px 0px 1.375rem;
+    background: url('../image/icon/arow_btn.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+@media (max-width: 63.9988rem) {
+  .hero {
+    padding: 8.75rem 0px 1.875rem;
+
+    &__title {
+      font-size: 2.8125rem;
+    }
+
+    &__body {
+      max-width: 40.625rem;
+    }
+  }
+}
+
+@media (max-width: 47.9988rem) {
+  .hero {
+    padding: 6.875rem 0px 1.875rem;
+
+    &__title {
+      font-size: 2.1875rem;
+    }
+
+    &__text {
+      font-size: 1.125rem;
+    }
+
+    &__body {
+      max-width: 34.375rem;
+    }
+
+    &__btn {
+      font-size: .875rem;
+    }
+  }
+}
+
+
+@media (max-width: 29.9375rem) {
+
+  .hero {
+    padding: 6.875rem 0px .3125rem;
+
+    &__title {
+      font-size: 1.4375rem;
+    }
+
+    &__text {
+      font-size: .875rem;
+    }
+
+    &__btn {
+      font-size: .625rem;
+    }
+
+  }
+
+}

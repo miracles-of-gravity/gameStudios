@@ -1,0 +1,222 @@
+body {
+  color: #fff;
+  font-family: $font;
+  background: $bg-accent;
+
+
+  &.lock {
+    overflow: hidden;
+  }
+}
+
+[class*="__container"] {
+  max-width: 71.25rem;
+  margin: 0 auto;
+  padding: 0px .9375rem;
+
+}
+
+.header,
+.footer {
+  z-index: var(--extra-bold-index);
+}
+
+.logo {
+  position: relative;
+  z-index: var(--heavy-index);
+  display: inline-block;
+  overflow: hidden;
+  height: 3.4375rem;
+  width: 11.25rem;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.page {
+  flex: 1 1 auto;
+  min-height: 68.75rem;
+}
+
+
+.title {
+  @extend %title;
+}
+
+.label {
+  @extend %label;
+}
+
+
+
+
+//! BURGER start style
+@media (max-width: 48rem) {
+
+  .burger {
+    width: 1.875rem;
+    height: 1.25rem;
+    background-color: initial;
+    border: initial;
+    position: relative;
+    z-index: 999;
+
+    transition: tranform .3s ease 0s;
+
+    & span {}
+
+    &::before,
+    &::after,
+    & span {
+
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+      transition: all .3s ease 0s;
+    }
+
+    & span {
+      top: 50%;
+      transform: scale(1) translateY(-50%);
+    }
+
+    &::after {
+      content: '';
+      top: 0;
+    }
+
+    &:before {
+      content: '';
+      bottom: 0;
+    }
+
+    &._active:hover {
+      // transform: rotate(95deg);
+    }
+
+    &._active span {
+      transform: scale(0);
+    }
+
+    &._active::after {
+      top: 50%;
+      transform: translate(0px, -50%) rotate(45deg);
+
+    }
+
+    &._active::before {
+      bottom: 50%;
+      transform: translate(0px, 50%) rotate(-45deg);
+
+    }
+  }
+}
+
+//! BURGER end style
+
+//* COLOR MODE
+.crusta {
+  border: 2px solid $color-crusta;
+  background-color: rgba(252, 120, 38, 0.2);
+  transition: all .33s ease;
+}
+
+.blue {
+  border: 2px solid $color-blue;
+  background-color: rgba(126, 191, 240, 0.2);
+  transition: all .33s ease;
+}
+
+.bush {
+  border: 2px solid $colog-accent;
+  background-color: rgba(64, 33, 165, 0.2);
+  transition: all .33s ease;
+}
+
+.gray {
+  border: 2px solid $color-gray;
+  background-color: rgba(101, 101, 101, 0.2);
+}
+
+//*FILTER 
+
+.filter {
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.25rem;
+
+  // .filter__item
+
+  &__item {
+    min-height: 7.5rem;
+  }
+
+}
+
+
+.upper {
+  // all: unset;
+  padding: 15px !important;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-size: 14px !important;
+  text-transform: capitalize !important;
+  position: fixed;
+  z-index: var(--heavy-index);
+  bottom: 0;
+  right: 0;
+  margin: 15px;
+  transition: initial !important;
+  animation: moveUpAndDown 0.33s infinite alternate;
+  color: #fff;
+
+  @keyframes moveUpAndDown {
+
+    0% {
+      transform: translateY(0);
+      /* Исходное состояние */
+    }
+
+    100% {
+      transform: translateY(-5px);
+      /* Поднятие на 10px */
+    }
+  }
+
+  &:hover::before {
+    width: 0% !important;
+    right: 0;
+  }
+
+  &:hover {
+    background-color: #000;
+  }
+
+
+
+  &::after {
+    content: '';
+    transform: rotate(-90deg);
+    display: inline-block;
+    width: .625rem;
+    height: .625rem;
+    margin: 0px 0px 0px 1.375rem;
+    background: url('../image/icon/arow_btn.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}

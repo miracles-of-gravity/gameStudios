@@ -1,0 +1,121 @@
+//Миксин
+@mixin flex($paramX, $paramY) {
+  display: flex;
+  justify-content: $paramX;
+  align-items: $paramY;
+}
+
+
+//@include grid(2, 1fr, (50px 20px));
+@mixin grid($columns: 2, $resize-column: 1fr, $gap: null) {
+  display: grid;
+  grid-template-columns: repeat($columns, $resize-column);
+  gap: $gap; //row-gap + column-gap
+}
+
+
+//*ANIMATION(mixin)
+//@include animation( 0, translate(0, 2.75rem), translate(0, 0), .2s);
+@mixin animation($opacity: 0, $initial-transform: translate(0, 2.75rem), $transform-relax: translate(0, 0), $transition-delay: 0s, ) {
+
+  opacity: $opacity;
+  transform: $initial-transform;
+
+  &.animation,
+  .animation & {
+    transform: $transform-relax;
+    opacity: 1;
+    transition: all .7s ease-in-out $transition-delay;
+  }
+}
+
+
+//@include animation-delays($selector:'.box__image', $total-items: 4, 0.4s, 0.2s, $ifElse: true/false);
+//&:nth-child().animation #{$selector} - true
+//&.animation #{$selector}:nth-child() - false
+@mixin animation-delays($selector, $total-items, $initial-delay: 0.2s, $delay-increment: 0.2s, $ifElse) {
+  @for $i from 1 through $total-items {
+
+    @if($ifElse) {
+      &:nth-child(#{$i}).animation #{$selector} {
+        transition-delay: $initial-delay + ($delay-increment * ($i - 1));
+      }
+    }
+
+    @else {
+      &.animation #{$selector}:nth-child(#{$i}) {
+        transition-delay: $initial-delay + ($delay-increment * ($i - 1));
+      }
+    }
+
+  }
+}
+
+//*ANIMATION(mixin)
+
+
+
+
+//* template (START)
+//@extend %resetButton;
+%resetButton {
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+%btnPlain {
+  display: inline-block;
+  background-color: #4021A5;
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 125%;
+  text-transform: uppercase;
+  color: #fff;
+  border-radius: 40px;
+  padding: 20px;
+  transition: 0.3s ease all;
+  border: none;
+
+  &:hover {
+    background-color: #360985;
+  }
+}
+
+%main-title {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 117.1875%;
+  text-transform: uppercase;
+}
+
+%main-label {
+  font-size: 14px;
+  line-height: 111%;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+%main-text {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 125%;
+}
+
+%title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 111.111111%;
+  text-transform: uppercase;
+}
+
+%label {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 125%;
+  letter-spacing: 0em;
+  text-transform: uppercase;
+}

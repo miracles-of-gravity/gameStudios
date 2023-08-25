@@ -1,0 +1,175 @@
+.horror {
+  padding: 7.5rem 0px;
+
+  // .horror__container
+  &__container {}
+
+  // .horror__inner
+  &__inner {
+    @include flex(center, center);
+    flex-wrap: wrap;
+  }
+
+  // .horror__image
+  &__image {
+
+    @include animation(0, null, null, 0s);
+
+    flex: 0 1 50%;
+    position: relative;
+    min-height: 350px;
+    overflow: hidden;
+    background-color: $colog-accent;
+
+    & img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 1s ease;
+      transform: scale(1);
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  // .horror__body
+  &__body {
+    // flex: 1 1 auto;
+    flex: 0 1 50%;
+    padding: 0px 0px 0px 7.6875rem;
+  }
+
+  // .horror__label
+  &__label {
+    &:not(:last-child) {
+      margin: 0px 0px .3125rem 0px;
+    }
+
+    @include animation(0, null, null, 0s);
+
+  }
+
+  // .horror__title
+  &__title {
+    @include animation(0, null, null, 0s);
+    max-width: 25rem;
+
+    &:not(:last-child) {
+      margin: 0px 0px 1.6875rem 0px;
+    }
+  }
+
+  // .horror__list
+
+  &__list {
+
+    overflow: hidden;
+    @include animation-delays('.horror__item', 3, .2s, .2s, false);
+
+
+    &:not(:last-child) {
+      margin: 0px 0px 1.0625rem 0px;
+    }
+  }
+
+  // .horror__item
+  &__item {
+    @include animation(0, translate(25%, 0), translate(0, 0), 0s);
+    padding: 0px 0px 0px 2.4375rem;
+    position: relative;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 1.25rem;
+    text-transform: uppercase;
+
+    &:not(:last-child) {
+      margin: 0px 0px .875rem 0px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 50%;
+      width: 1.5rem;
+      height: 1.5rem;
+      transform: translateY(-50%);
+      background: url('../image/icon/horror__okey.png');
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+@media (max-width: 63.9988rem) {
+  .horror {
+    &__body {
+      padding: 0px 0px 0px 4.375rem;
+    }
+  }
+}
+
+@media (max-width: 61.9988rem) {
+  .horror {
+    padding: 3.75rem 0px;
+  }
+}
+
+@media (max-width: 47.9988rem) {
+  .horror {
+    padding: 1.875rem 0px;
+
+
+    &__label {
+      text-align: center;
+    }
+
+    &__title {
+      max-width: 28.125rem;
+
+      &:not(:last-child) {
+        margin: 0 auto 1.5625rem auto;
+      }
+
+      text-align: center;
+      font-size: 1.875rem;
+    }
+
+    &__list {
+      margin: 0px 0px 1.875rem 0px;
+
+    }
+
+    &__inner {
+      flex-direction: column-reverse;
+      align-items: stretch;
+      // justify-content: center;
+
+    }
+
+    &__body {
+      padding: 0px;
+    }
+  }
+}
+
+@media (max-width: 29.9375rem) {
+  .horror {
+
+    &__image {
+      min-height: 13.75rem;
+    }
+
+    &__label,
+    &__item {
+      font-size: .875rem;
+    }
+
+
+  }
+}

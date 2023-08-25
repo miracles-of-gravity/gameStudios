@@ -1,0 +1,47 @@
+.footer {
+  padding: 2.5rem 0px;
+  // background: #14171A;
+  background: linear-gradient(270deg, rgba(5, 5, 5, .5) 0%, rgba(0, 7, 8, .5) 100%);
+
+  // .footer__container
+  &__container {
+    @include flex(space-between, center);
+    flex-wrap: wrap;
+  }
+
+  // .footer__logo
+
+  &__logo {}
+
+  // .footer__social
+
+  &__social {
+    display: flex;
+  }
+
+  // .footer__item
+
+  &__item {
+    flex: 0 1 1.875rem;
+
+    &:not(:last-child) {
+      margin: 0px 1.25rem 0px 0px;
+    }
+  }
+}
+
+
+@media (max-width: 23.4375rem) {
+  .footer {
+
+    &__logo {
+      margin-bottom: 1.25rem;
+    }
+
+    &__container {
+      @include flex(center, center);
+      flex-direction: column;
+      flex-wrap: wrap;
+    }
+  }
+}
