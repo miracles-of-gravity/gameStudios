@@ -1,0 +1,16 @@
+:root {
+  /* --white-color: #fff;
+   --black-color: #000; */
+  /* ------- weight-index [вес для индекса]-----------*/
+  --zero-index: -1;
+  --thin-index: 100;
+  --extra-light-index: 200;
+  --light-index: 300;
+  --normal-index: 400;
+  --medium-index: 500;
+  --semi-bold-index: 600;
+  --bold-index: 700;
+  --extra-bold-index: 800;
+  --heavy-index: 900;
+  /* ------- weight-index [вес для индекса] ---------- */
+}
